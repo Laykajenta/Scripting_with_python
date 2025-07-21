@@ -1,7 +1,5 @@
 import PyPDF2
 
-
-
 with open('dummy.pdf', 'rb') as file:
     reader = PyPDF2.PdfReader(file)
     side=reader.pages[0]
