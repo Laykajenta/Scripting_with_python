@@ -1,10 +1,10 @@
 import PyPDF2
 
-template = PyPDF2.PdfReader(open('super.pdf', 'rb'))
-watermark = PyPDF2.PdfReader(open('wtr.pdf', 'rb'))
-output= PyPDF2.PdfWriter()
+template = PyPDF2.PdfFileReader(open('super.pdf', 'rb'))
+watermark = PyPDF2.PdfFileReader(open('wtr.pdf', 'rb'))
+output= PyPDF2.PdFilefWriter()
 
-for i in range(template.getNumPages())
+for i in range(template.getNumPages()):
     page = template.getPage(i)
     page.mergePage(watermark.getPage(0))
     output.addPage(page)
